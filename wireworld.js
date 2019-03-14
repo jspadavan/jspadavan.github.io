@@ -43,12 +43,19 @@ function drawWorld() {
     }
 }
 function openFile( event ) {
-    var input = event.target;
-    var reader = new FileReader();
-    reader.onload = function() {
-        createWorld( reader.result );
-    };
-    reader.readAsText(input.files[0]);
+    // var input = event.target;
+    // var reader = new FileReader();
+    // reader.onload = function() {
+        // createWorld( reader.result );
+    // };
+    // reader.readAsText(input.files[0]);
+createWorld("11\r\n\
+5\r\n\
+tH.........\r\n\
+.   .      \r\n\
+   ...     \r\n\
+.   .      \r\n\
+Ht.. ......");	
 }
 function createWorld( txt ) {
     var l = txt.split( "\n" );
@@ -84,12 +91,7 @@ function init() {
     ctx = canvas.getContext( "2d" );
     ctx.scale( scl, scl );
     document.body.appendChild( canvas );
+	
     simulate();
 }
-createWorld("11\
-5\
-tH.........\
-.   .      \
-   ...     \
-.   .      \
-Ht.. ......");
+
