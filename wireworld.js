@@ -84,5 +84,12 @@ function init() {
     ctx = canvas.getContext( "2d" );
     ctx.scale( scl, scl );
     document.body.appendChild( canvas );
+    createWorld("11\
+5\
+tH.........\
+.   .      \
+   ...     \
+.   .      \
+Ht.. ......");
     simulate();
 }
